@@ -2,145 +2,42 @@ package com.laethel.android.hardware_maintenance.controllers;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 
 import com.laethel.android.hardware_maintenance.R;
 
+import org.w3c.dom.Text;
+
 public class MainActivity extends AppCompatActivity {
 
-    private TextView mGreetingText;
-    private EditText mFirstName;
-    private EditText mLastName;
-    private EditText mAddress;
-    private EditText mCity;
-    private EditText mZip;
-    private EditText mPhone;
-    private Button mStart;
+    private TextView mMainBanner;
+    private Button mMainBt1;
+    private Button mMainBt2;
+    private Button mMainBt3;
+    private Button mMainBt4;
+    private Button mMainBt5;
+    private Button mMainBt6;
+    private Button mMainBtHome;
+    private Button mMainBtRepairs;
+    private Button mMainBtProfile;
 
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mGreetingText = (TextView) findViewById(R.id.welcome_text);
-        mFirstName = (EditText) findViewById(R.id.welcome_first_name);
-        mLastName = (EditText) findViewById(R.id.welcome_last_name);
-        mAddress = (EditText) findViewById(R.id.welcome_address);
-        mCity = (EditText) findViewById(R.id.welcome_city);
-        mZip = (EditText) findViewById(R.id.welcome_zip);
-        mPhone = (EditText) findViewById(R.id.welcome_phone);
-        mStart = (Button) findViewById(R.id.welcome_start);
-
-        mFirstName.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                checkRequiredFields();
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
-            }
-        });
-
-        mLastName.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                checkRequiredFields();
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
-            }
-        });
-
-        mAddress.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                checkRequiredFields();
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
-            }
-        });
-
-        mCity.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                checkRequiredFields();
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
-            }
-        });
-
-        mZip.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-                checkRequiredFields();
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                checkRequiredFields();
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
-            }
-        });
-
-        mPhone.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                checkRequiredFields();
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
-            }
-        });
-    }
-    private void checkRequiredFields() {
-        if (!mFirstName.getText().toString().isEmpty() && !mLastName.getText().toString().isEmpty()  && !mAddress.getText().toString().isEmpty()
-                && !mCity.getText().toString().isEmpty() && !mZip.getText().toString().isEmpty() && !mPhone.getText().toString().isEmpty()) {
-            mStart.setEnabled(true);
-        } else {
-            mStart.setEnabled(false);
-        }
+        final Bundle extras = getIntent().getExtras();
+        final String fNameUser = extras.getString("fName");
+        mMainBanner = (TextView) findViewById(R.id.main_banner);
+        mMainBanner.setText("Welcome " + fNameUser + " ! \n Please select your issue below :)");
+        mMainBt1 = (Button) findViewById(R.id.main_button1);
+        mMainBt2 = (Button) findViewById(R.id.main_button2);
+        mMainBt3 = (Button) findViewById(R.id.main_button3);
+        mMainBt4 = (Button) findViewById(R.id.main_button4);
+        mMainBt5 = (Button) findViewById(R.id.main_button5);
+        mMainBt6 = (Button) findViewById(R.id.main_button6);
+        mMainBtHome = (Button) findViewById(R.id.main_buttonHome);
+        mMainBtRepairs = (Button) findViewById(R.id.main_buttonRepairs);
+        mMainBtProfile = (Button) findViewById(R.id.main_buttonProfile);
     }
 }
