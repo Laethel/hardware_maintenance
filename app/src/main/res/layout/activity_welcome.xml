@@ -17,7 +17,8 @@
         android:text="Welcome to HW_maintenance! \n \n Please enter your information below : "
         android:textAlignment="center"
         android:textSize="20dp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:textColor="@android:color/black"/>
 
     <EditText
         android:id="@+id/welcome_first_name"
