@@ -65,6 +65,45 @@ public class IssueActivity extends AppCompatActivity {
         mIssue_back = (Button) findViewById(R.id.issue_back);
         mIssue_confirm = (Button) findViewById(R.id.issue_confirm);
 
+        switch(issueName){
+            case "System":
+                mIssue_checkbox_1.setText("System 1");
+                mIssue_checkbox_2.setText("System 2");
+                mIssue_checkbox_3.setText("System 3");
+                mIssue_checkbox_4.setText("System 4");
+                mIssue_checkbox_5.setText("System 5");
+                mIssue_checkbox_6.setText("System 6");
+                mIssue_checkbox_7.setText("System 7");
+                mIssue_checkbox_8.setText("System 8");
+                mIssue_checkbox_9.setText("System 9");
+                mIssue_checkbox_10.setText("System 10");
+                break;
+            case "Security":
+                mIssue_checkbox_1.setText("Security 1");
+                mIssue_checkbox_2.setText("Security 2");
+                mIssue_checkbox_3.setText("Security 3");
+                mIssue_checkbox_4.setText("Security 4");
+                mIssue_checkbox_5.setText("Security 5");
+                mIssue_checkbox_6.setText("Security 6");
+                mIssue_checkbox_7.setText("Security 7");
+                mIssue_checkbox_8.setText("Security 8");
+                mIssue_checkbox_9.setText("Security 9");
+                mIssue_checkbox_10.setText("Security 10");
+                break;
+            case "Memory":
+                mIssue_checkbox_1.setText("Memory 1");
+                mIssue_checkbox_2.setText("Memory 2");
+                mIssue_checkbox_3.setText("Memory 3");
+                mIssue_checkbox_4.setText("Memory 4");
+                mIssue_checkbox_5.setText("Memory 5");
+                mIssue_checkbox_6.setText("Memory 6");
+                mIssue_checkbox_7.setText("Memory 7");
+                mIssue_checkbox_8.setText("Memory 8");
+                mIssue_checkbox_9.setText("Memory 9");
+                mIssue_checkbox_10.setText("Memory 10");
+                break;
+        }
+
         mIssue_checkbox_diagnosis.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -170,8 +209,7 @@ public class IssueActivity extends AppCompatActivity {
         mIssue_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent mainActivity = new Intent(IssueActivity.this, MainActivity.class);
-                startActivity(mainActivity);
+                IssueActivity.this.finish();
             }
         });
 

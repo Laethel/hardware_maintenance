@@ -86,7 +86,7 @@
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:layout_marginTop="150dp"
-                android:text="System   (Windows)"/>
+                android:text="System"/>
 
             <Button
                 android:id="@+id/main_button2"

@@ -100,8 +100,7 @@
                 android:paddingBottom="8dp"
                 android:button="@null"
                 android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
-                android:drawableEnd="?android:attr/listChoiceIndicatorMultiple"
-                android:text="This is a test"/>
+                android:drawableEnd="?android:attr/listChoiceIndicatorMultiple" />
 
             <CheckBox
                 android:id="@+id/issue_checkbox_2"
@@ -110,8 +109,7 @@
                 android:paddingBottom="8dp"
                 android:button="@null"
                 android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
-                android:drawableEnd="?android:attr/listChoiceIndicatorMultiple"
-                android:text="This is a test"/>
+                android:drawableEnd="?android:attr/listChoiceIndicatorMultiple" />
 
             <CheckBox
                 android:id="@+id/issue_checkbox_3"
@@ -120,8 +118,7 @@
                 android:paddingBottom="8dp"
                 android:button="@null"
                 android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
-                android:drawableEnd="?android:attr/listChoiceIndicatorMultiple"
-                android:text="This is a test"/>
+                android:drawableEnd="?android:attr/listChoiceIndicatorMultiple" />
 
             <CheckBox
                 android:id="@+id/issue_checkbox_4"
@@ -130,8 +127,7 @@
                 android:paddingBottom="8dp"
                 android:button="@null"
                 android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
-                android:drawableEnd="?android:attr/listChoiceIndicatorMultiple"
-                android:text="This is a test"/>
+                android:drawableEnd="?android:attr/listChoiceIndicatorMultiple" />
 
             <CheckBox
                 android:id="@+id/issue_checkbox_5"
@@ -140,8 +136,7 @@
                 android:paddingBottom="10dp"
                 android:button="@null"
                 android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
-                android:drawableEnd="?android:attr/listChoiceIndicatorMultiple"
-                android:text="This is a test"/>
+                android:drawableEnd="?android:attr/listChoiceIndicatorMultiple" />
 
             <CheckBox
                 android:id="@+id/issue_checkbox_6"
@@ -150,8 +145,7 @@
                 android:paddingBottom="8dp"
                 android:button="@null"
                 android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
-                android:drawableEnd="?android:attr/listChoiceIndicatorMultiple"
-                android:text="This is a test"/>
+                android:drawableEnd="?android:attr/listChoiceIndicatorMultiple" />
 
             <CheckBox
                 android:id="@+id/issue_checkbox_7"
@@ -160,8 +154,7 @@
                 android:paddingBottom="8dp"
                 android:button="@null"
                 android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
-                android:drawableEnd="?android:attr/listChoiceIndicatorMultiple"
-                android:text="This is a test"/>
+                android:drawableEnd="?android:attr/listChoiceIndicatorMultiple" />
 
             <CheckBox
                 android:id="@+id/issue_checkbox_8"
@@ -170,8 +163,7 @@
                 android:paddingBottom="8dp"
                 android:button="@null"
                 android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
-                android:drawableEnd="?android:attr/listChoiceIndicatorMultiple"
-                android:text="This is a test"/>
+                android:drawableEnd="?android:attr/listChoiceIndicatorMultiple" />
 
             <CheckBox
                 android:id="@+id/issue_checkbox_9"
@@ -180,8 +172,7 @@
                 android:paddingBottom="8dp"
                 android:button="@null"
                 android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
-                android:drawableEnd="?android:attr/listChoiceIndicatorMultiple"
-                android:text="This is a test"/>
+                android:drawableEnd="?android:attr/listChoiceIndicatorMultiple" />
 
             <CheckBox
                 android:id="@+id/issue_checkbox_10"
@@ -190,8 +181,7 @@
                 android:paddingBottom="8dp"
                 android:button="@null"
                 android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
-                android:drawableEnd="?android:attr/listChoiceIndicatorMultiple"
-                android:text="This is a test"/>
+                android:drawableEnd="?android:attr/listChoiceIndicatorMultiple" />
 
             <CheckBox
                 android:id="@+id/issue_checkbox_other"
