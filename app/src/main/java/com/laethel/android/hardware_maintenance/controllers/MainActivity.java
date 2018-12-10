@@ -29,15 +29,18 @@ public class MainActivity extends AppCompatActivity {
     private Button mMainBtHome;
     private Button mMainBtRepairs;
     private Button mMainBtProfile;
+    protected String fNameUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         final Bundle extras = getIntent().getExtras();
-        final String fNameUser = extras.getString("fName");
+        if (extras != null){
+            this.fNameUser = extras.getString("fName");
+        }
         mMainBanner = (TextView) findViewById(R.id.main_banner);
-        mMainBanner.setText("Welcome " + fNameUser + " ! \n Please select your issue below :)");
+        mMainBanner.setText(getString(R.string.main_banner_text, fNameUser));// Display the welcome message and the name of the user
         mMainBtDiagnosis = (Button) findViewById(R.id.main_buttonDiagnosis);
         mMainBt1 = (Button) findViewById(R.id.main_button1);
         mMainBt2 = (Button) findViewById(R.id.main_button2);
@@ -56,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
         mMainBtDiagnosis.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //make a special screen for the diagnosis
                 Intent issueActivity = new Intent(MainActivity.this, IssueActivity.class);
                 String issueName = "Diagnosis";
                 issueActivity.putExtra("issueName", issueName);

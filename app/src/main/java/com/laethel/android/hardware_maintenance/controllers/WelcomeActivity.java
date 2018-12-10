@@ -21,6 +21,7 @@ public class WelcomeActivity extends AppCompatActivity {
     private EditText mCity;
     private EditText mZip;
     private EditText mPhone;
+    private EditText mMail;
     private Button mStart;
 
     private String fName;
@@ -35,6 +36,7 @@ public class WelcomeActivity extends AppCompatActivity {
         mCity = (EditText) findViewById(R.id.welcome_city);
         mZip = (EditText) findViewById(R.id.welcome_zip);
         mPhone = (EditText) findViewById(R.id.welcome_phone);
+        mMail = (EditText) findViewById(R.id.welcome_mail);
         mStart = (Button) findViewById(R.id.welcome_start);
 
         mFirstName.addTextChangedListener(new TextWatcher() {
@@ -139,6 +141,22 @@ public class WelcomeActivity extends AppCompatActivity {
             }
         });
 
+        mMail.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                checkRequiredFields();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
         mStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -151,7 +169,8 @@ public class WelcomeActivity extends AppCompatActivity {
     }
     private void checkRequiredFields() {
         if (!mFirstName.getText().toString().isEmpty() && !mLastName.getText().toString().isEmpty()  && !mAddress.getText().toString().isEmpty()
-                && !mCity.getText().toString().isEmpty() && !mZip.getText().toString().isEmpty() && !mPhone.getText().toString().isEmpty()) {
+                && !mCity.getText().toString().isEmpty() && !mZip.getText().toString().isEmpty() && !mPhone.getText().toString().isEmpty()
+                && !mMail.getText().toString().isEmpty()) {
             mStart.setEnabled(true);
         } else {
             mStart.setEnabled(false);

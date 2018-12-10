@@ -22,7 +22,7 @@
                 android:padding="15dp"
                 style="?android:attr/buttonBarButtonStyle"
                 android:textColor="@color/colorPrimary"
-                android:text="Home"/>
+                android:text="@string/bottom_menu_bt1"/>
 
             <Button
                 android:id="@+id/main_buttonRepairs"
@@ -31,7 +31,7 @@
                 android:padding="15dp"
                 style="?android:attr/buttonBarButtonStyle"
                 android:textColor="@color/colorPrimary"
-                android:text="Repairs"/>
+                android:text="@string/bottom_menu_bt2"/>
 
             <Button
                 android:id="@+id/main_buttonProfile"
@@ -40,7 +40,7 @@
                 android:padding="15dp"
                 style="?android:attr/buttonBarButtonStyle"
                 android:textColor="@color/colorPrimary"
-                android:text="Profile"/>
+                android:text="@string/bottom_menu_bt3"/>
 
     </LinearLayout>
 
@@ -76,7 +76,7 @@
                 android:textSize="18sp"
                 android:textColor="@color/colorPrimary"
                 android:layout_marginTop="90dp"
-                android:text="Diagnosis"/>
+                android:text="@string/main_bt_diagnosis"/>
 
             <Button
                 android:id="@+id/main_button1"
@@ -86,7 +86,7 @@
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:layout_marginTop="150dp"
-                android:text="System"/>
+                android:text="@string/main_bt1"/>
 
             <Button
                 android:id="@+id/main_button2"
@@ -96,7 +96,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_alignParentEnd="true"
                 android:layout_marginTop="150dp"
-                android:text="Security"/>
+                android:text="@string/main_bt2"/>
 
             <Button
                 android:id="@+id/main_button3"
@@ -106,7 +106,7 @@
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:layout_marginTop="250dp"
-                android:text="Memory"/>
+                android:text="@string/main_bt3"/>
 
             <Button
                 android:id="@+id/main_button4"
@@ -116,7 +116,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_alignParentEnd="true"
                 android:layout_marginTop="250dp"
-                android:text="Screen"/>
+                android:text="@string/main_bt4"/>
 
             <Button
                 android:id="@+id/main_button5"
@@ -126,7 +126,7 @@
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:layout_marginTop="350dp"
-                android:text="Peripherals (Mouse, keyboard)"/>
+                android:text="@string/main_bt5"/>
 
             <Button
                 android:id="@+id/main_button6"
@@ -136,7 +136,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_alignParentEnd="true"
                 android:layout_marginTop="350dp"
-                android:text="Battery"/>
+                android:text="@string/main_bt6"/>
 
             <Button
                 android:id="@+id/main_button7"
@@ -146,7 +146,7 @@
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:layout_marginTop="450dp"
-                android:text="Button 7"/>
+                android:text="@string/main_bt7"/>
 
             <Button
                 android:id="@+id/main_button8"
@@ -156,7 +156,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_alignParentEnd="true"
                 android:layout_marginTop="450dp"
-                android:text="Button 8"/>
+                android:text="@string/main_bt8"/>
 
             <Button
                 android:id="@+id/main_button9"
@@ -166,7 +166,7 @@
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:layout_marginTop="550dp"
-                android:text="Button 9"/>
+                android:text="@string/main_bt9"/>
 
             <Button
                 android:id="@+id/main_button10"
@@ -176,7 +176,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_alignParentEnd="true"
                 android:layout_marginTop="550dp"
-                android:text="Button 10"/>
+                android:text="@string/main_bt10"/>
 
         </RelativeLayout>
     </ScrollView>

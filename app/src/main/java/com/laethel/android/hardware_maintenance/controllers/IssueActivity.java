@@ -36,13 +36,16 @@ public class IssueActivity extends AppCompatActivity {
     private EditText mIssue_comment;
     private Button mIssue_back;
     private Button mIssue_confirm;
+    protected String issueName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_issue);
         final Bundle extras = getIntent().getExtras();
-        final String issueName = extras.getString("issueName");
+        if (extras != null){
+            this.issueName = extras.getString("issueName");
+        }
         mIssue_banner = (TextView) findViewById(R.id.issue_banner);
         mIssue_banner.setText(issueName);
         mIssue_checkbox_diagnosis = (CheckBox) findViewById(R.id.issue_checkbox_diagnosis);
@@ -67,40 +70,40 @@ public class IssueActivity extends AppCompatActivity {
 
         switch(issueName){
             case "System":
-                mIssue_checkbox_1.setText("System 1");
-                mIssue_checkbox_2.setText("System 2");
-                mIssue_checkbox_3.setText("System 3");
-                mIssue_checkbox_4.setText("System 4");
-                mIssue_checkbox_5.setText("System 5");
-                mIssue_checkbox_6.setText("System 6");
-                mIssue_checkbox_7.setText("System 7");
-                mIssue_checkbox_8.setText("System 8");
-                mIssue_checkbox_9.setText("System 9");
-                mIssue_checkbox_10.setText("System 10");
+                mIssue_checkbox_1.setText(R.string.system_issue_1);
+                mIssue_checkbox_2.setText(R.string.system_issue_2);
+                mIssue_checkbox_3.setText(R.string.system_issue_3);
+                mIssue_checkbox_4.setText(R.string.system_issue_4);
+                mIssue_checkbox_5.setText(R.string.system_issue_5);
+                mIssue_checkbox_6.setText(R.string.system_issue_6);
+                mIssue_checkbox_7.setText(R.string.system_issue_7);
+                mIssue_checkbox_8.setText(R.string.system_issue_8);
+                mIssue_checkbox_9.setText(R.string.system_issue_9);
+                mIssue_checkbox_10.setText(R.string.system_issue_10);
                 break;
             case "Security":
-                mIssue_checkbox_1.setText("Security 1");
-                mIssue_checkbox_2.setText("Security 2");
-                mIssue_checkbox_3.setText("Security 3");
-                mIssue_checkbox_4.setText("Security 4");
-                mIssue_checkbox_5.setText("Security 5");
-                mIssue_checkbox_6.setText("Security 6");
-                mIssue_checkbox_7.setText("Security 7");
-                mIssue_checkbox_8.setText("Security 8");
-                mIssue_checkbox_9.setText("Security 9");
-                mIssue_checkbox_10.setText("Security 10");
+                mIssue_checkbox_1.setText(R.string.security_issue_1);
+                mIssue_checkbox_2.setText(R.string.security_issue_2);
+                mIssue_checkbox_3.setText(R.string.security_issue_3);
+                mIssue_checkbox_4.setText(R.string.security_issue_4);
+                mIssue_checkbox_5.setText(R.string.security_issue_5);
+                mIssue_checkbox_6.setText(R.string.security_issue_6);
+                mIssue_checkbox_7.setText(R.string.security_issue_7);
+                mIssue_checkbox_8.setText(R.string.security_issue_8);
+                mIssue_checkbox_9.setText(R.string.security_issue_9);
+                mIssue_checkbox_10.setText(R.string.security_issue_10);
                 break;
             case "Memory":
-                mIssue_checkbox_1.setText("Memory 1");
-                mIssue_checkbox_2.setText("Memory 2");
-                mIssue_checkbox_3.setText("Memory 3");
-                mIssue_checkbox_4.setText("Memory 4");
-                mIssue_checkbox_5.setText("Memory 5");
-                mIssue_checkbox_6.setText("Memory 6");
-                mIssue_checkbox_7.setText("Memory 7");
-                mIssue_checkbox_8.setText("Memory 8");
-                mIssue_checkbox_9.setText("Memory 9");
-                mIssue_checkbox_10.setText("Memory 10");
+                mIssue_checkbox_1.setText(R.string.memory_issue_1);
+                mIssue_checkbox_2.setText(R.string.memory_issue_2);
+                mIssue_checkbox_3.setText(R.string.memory_issue_3);
+                mIssue_checkbox_4.setText(R.string.memory_issue_4);
+                mIssue_checkbox_5.setText(R.string.memory_issue_5);
+                mIssue_checkbox_6.setText(R.string.memory_issue_6);
+                mIssue_checkbox_7.setText(R.string.memory_issue_7);
+                mIssue_checkbox_8.setText(R.string.memory_issue_8);
+                mIssue_checkbox_9.setText(R.string.memory_issue_9);
+                mIssue_checkbox_10.setText(R.string.memory_issue_10);
                 break;
         }
 
