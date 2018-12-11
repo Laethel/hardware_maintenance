@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         final Bundle extras = getIntent().getExtras();
         if (extras != null){
-            this.fNameUser = extras.getString("fName");
+            this.fNameUser = extras.getString("firstName");
         }
         mMainBanner = (TextView) findViewById(R.id.main_banner);
         mMainBanner.setText(getString(R.string.main_banner_text, fNameUser));// Display the welcome message and the name of the user
