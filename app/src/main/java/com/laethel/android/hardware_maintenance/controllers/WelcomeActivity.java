@@ -53,6 +53,7 @@ public class WelcomeActivity extends AppCompatActivity {
         mMail = (EditText) findViewById(R.id.welcome_mail);
         mStart = (Button) findViewById(R.id.welcome_start);
         checkExistingUser();
+        checkRequiredFields();
 
         mFirstName.addTextChangedListener(new TextWatcher() {
             @Override
@@ -216,7 +217,7 @@ public class WelcomeActivity extends AppCompatActivity {
     private void checkExistingUser(){
 
         String fName = mPreferences.getString(PREF_KEY_FIRSTNAME, null);
-        if (null != fName){
+        if (fName != null){
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
             builder.setTitle("Hello " +mPreferences.getString(PREF_KEY_FIRSTNAME, null) + " !")
                     .setMessage("Welcome back :)")
@@ -238,6 +239,13 @@ public class WelcomeActivity extends AppCompatActivity {
                             mUser.setmZip(null);
                             mUser.setmPhone(null);
                             mUser.setmMail(null);
+                            mPreferences.edit().putString(PREF_KEY_FIRSTNAME, mUser.getmFirstName()).apply();
+                            mPreferences.edit().putString(PREF_KEY_LASTNAME, mUser.getmLastName()).apply();
+                            mPreferences.edit().putString(PREF_KEY_ADDRESS, mUser.getmAddress()).apply();
+                            mPreferences.edit().putString(PREF_KEY_CITY, mUser.getmCity()).apply();
+                            mPreferences.edit().putString(PREF_KEY_ZIP, mUser.getmZip()).apply();
+                            mPreferences.edit().putString(PREF_KEY_PHONE, mUser.getmPhone()).apply();
+                            mPreferences.edit().putString(PREF_KEY_MAIL, mUser.getmMail()).apply();
                         }
                     })
                     .create()
