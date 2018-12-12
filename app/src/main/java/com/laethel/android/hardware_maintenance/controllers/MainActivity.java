@@ -39,22 +39,22 @@ public class MainActivity extends AppCompatActivity {
         if (extras != null){
             this.fNameUser = extras.getString("firstName");
         }
-        mMainBanner = (TextView) findViewById(R.id.main_banner);
+        mMainBanner = findViewById(R.id.main_banner);
         mMainBanner.setText(getString(R.string.main_banner_text, fNameUser));// Display the welcome message and the name of the user
-        mMainBtDiagnosis = (Button) findViewById(R.id.main_buttonDiagnosis);
-        mMainBt1 = (Button) findViewById(R.id.main_button1);
-        mMainBt2 = (Button) findViewById(R.id.main_button2);
-        mMainBt3 = (Button) findViewById(R.id.main_button3);
-        mMainBt4 = (Button) findViewById(R.id.main_button4);
-        mMainBt5 = (Button) findViewById(R.id.main_button5);
-        mMainBt6 = (Button) findViewById(R.id.main_button6);
-        mMainBt7 = (Button) findViewById(R.id.main_button7);
-        mMainBt8 = (Button) findViewById(R.id.main_button8);
-        mMainBt9 = (Button) findViewById(R.id.main_button9);
-        mMainBt10 = (Button) findViewById(R.id.main_button10);
-        mMainBtHome = (Button) findViewById(R.id.main_buttonHome);
-        mMainBtRepairs = (Button) findViewById(R.id.main_buttonRepairs);
-        mMainBtProfile = (Button) findViewById(R.id.main_buttonProfile);
+        mMainBtDiagnosis = findViewById(R.id.main_buttonDiagnosis);
+        mMainBt1 = findViewById(R.id.main_button1);
+        mMainBt2 = findViewById(R.id.main_button2);
+        mMainBt3 = findViewById(R.id.main_button3);
+        mMainBt4 = findViewById(R.id.main_button4);
+        mMainBt5 = findViewById(R.id.main_button5);
+        mMainBt6 = findViewById(R.id.main_button6);
+        mMainBt7 = findViewById(R.id.main_button7);
+        mMainBt8 = findViewById(R.id.main_button8);
+        mMainBt9 = findViewById(R.id.main_button9);
+        mMainBt10 = findViewById(R.id.main_button10);
+        mMainBtHome = findViewById(R.id.main_buttonHome);
+        mMainBtRepairs = findViewById(R.id.main_buttonRepairs);
+        mMainBtProfile = findViewById(R.id.main_buttonProfile);
 
         mMainBtDiagnosis.setOnClickListener(new View.OnClickListener() {
             @Override

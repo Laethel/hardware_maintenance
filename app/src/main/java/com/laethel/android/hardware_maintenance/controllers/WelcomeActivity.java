@@ -43,15 +43,15 @@ public class WelcomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_welcome);
         mUser = new User();
         mPreferences = getPreferences(MODE_PRIVATE);
-        mGreetingText = (TextView) findViewById(R.id.welcome_text);
-        mFirstName = (EditText) findViewById(R.id.welcome_first_name);
-        mLastName = (EditText) findViewById(R.id.welcome_last_name);
-        mAddress = (EditText) findViewById(R.id.welcome_address);
-        mCity = (EditText) findViewById(R.id.welcome_city);
-        mZip = (EditText) findViewById(R.id.welcome_zip);
-        mPhone = (EditText) findViewById(R.id.welcome_phone);
-        mMail = (EditText) findViewById(R.id.welcome_mail);
-        mStart = (Button) findViewById(R.id.welcome_start);
+        mGreetingText = findViewById(R.id.welcome_text);
+        mFirstName = findViewById(R.id.welcome_first_name);
+        mLastName = findViewById(R.id.welcome_last_name);
+        mAddress = findViewById(R.id.welcome_address);
+        mCity = findViewById(R.id.welcome_city);
+        mZip = findViewById(R.id.welcome_zip);
+        mPhone = findViewById(R.id.welcome_phone);
+        mMail = findViewById(R.id.welcome_mail);
+        mStart = findViewById(R.id.welcome_start);
         checkExistingUser();
         checkRequiredFields();
 

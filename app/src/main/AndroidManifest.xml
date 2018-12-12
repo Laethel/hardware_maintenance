@@ -17,7 +17,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".controllers.MainActivity" />
-        <activity android:name=".controllers.IssueActivity"></activity>
+        <activity android:name=".controllers.IssueActivity"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
     </application>
 
 </manifest>
