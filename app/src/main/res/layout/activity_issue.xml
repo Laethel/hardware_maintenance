@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/hdw2"
+    android:windowSoftInputMode="stateHidden"
     tools:context=".controllers.IssueActivity">
 
     <RelativeLayout
@@ -35,11 +36,24 @@
             android:paddingBottom="10dp"
             android:button="@null"
             android:drawableEnd="?android:attr/listChoiceIndicatorMultiple"
-            android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
-            android:text="I have made a diagnosis or I know what I'm doing"
+            android:text="@string/diagnosis_made"
             android:textColor="@color/colorPrimary"
             android:textSize="18sp"
             android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/issue_text_diagnosis"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="40dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="@string/diagnosis_question"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:visibility="invisible"/>
 
     </RelativeLayout>
 
@@ -58,7 +72,7 @@
             android:padding="15dp"
             style="?android:attr/buttonBarButtonStyle"
             android:textColor="@color/colorPrimary"
-            android:text="Home"/>
+            android:text="@string/bottom_menu_bt1"/>
 
         <Button
             android:id="@+id/main_buttonRepairs"
@@ -67,7 +81,7 @@
             android:padding="15dp"
             style="?android:attr/buttonBarButtonStyle"
             android:textColor="@color/colorPrimary"
-            android:text="Repairs"/>
+            android:text="@string/bottom_menu_bt2"/>
 
         <Button
             android:id="@+id/main_buttonProfile"
@@ -76,7 +90,7 @@
             android:padding="15dp"
             style="?android:attr/buttonBarButtonStyle"
             android:textColor="@color/colorPrimary"
-            android:text="Profile"/>
+            android:text="@string/bottom_menu_bt3"/>
 
     </LinearLayout>
 
@@ -99,9 +113,7 @@
                 android:layout_height="wrap_content"
                 android:paddingBottom="8dp"
                 android:button="@null"
-                android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
-                android:drawableEnd="?android:attr/listChoiceIndicatorMultiple"
-                android:text="This is a test"/>
+                android:drawableEnd="?android:attr/listChoiceIndicatorMultiple" />
 
             <CheckBox
                 android:id="@+id/issue_checkbox_2"
@@ -109,9 +121,7 @@
                 android:layout_height="wrap_content"
                 android:paddingBottom="8dp"
                 android:button="@null"
-                android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
-                android:drawableEnd="?android:attr/listChoiceIndicatorMultiple"
-                android:text="This is a test"/>
+                android:drawableEnd="?android:attr/listChoiceIndicatorMultiple" />
 
             <CheckBox
                 android:id="@+id/issue_checkbox_3"
@@ -119,9 +129,7 @@
                 android:layout_height="wrap_content"
                 android:paddingBottom="8dp"
                 android:button="@null"
-                android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
-                android:drawableEnd="?android:attr/listChoiceIndicatorMultiple"
-                android:text="This is a test"/>
+                android:drawableEnd="?android:attr/listChoiceIndicatorMultiple" />
 
             <CheckBox
                 android:id="@+id/issue_checkbox_4"
@@ -129,9 +137,7 @@
                 android:layout_height="wrap_content"
                 android:paddingBottom="8dp"
                 android:button="@null"
-                android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
-                android:drawableEnd="?android:attr/listChoiceIndicatorMultiple"
-                android:text="This is a test"/>
+                android:drawableEnd="?android:attr/listChoiceIndicatorMultiple" />
 
             <CheckBox
                 android:id="@+id/issue_checkbox_5"
@@ -139,9 +145,7 @@
                 android:layout_height="wrap_content"
                 android:paddingBottom="10dp"
                 android:button="@null"
-                android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
-                android:drawableEnd="?android:attr/listChoiceIndicatorMultiple"
-                android:text="This is a test"/>
+                android:drawableEnd="?android:attr/listChoiceIndicatorMultiple" />
 
             <CheckBox
                 android:id="@+id/issue_checkbox_6"
@@ -149,9 +153,7 @@
                 android:layout_height="wrap_content"
                 android:paddingBottom="8dp"
                 android:button="@null"
-                android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
-                android:drawableEnd="?android:attr/listChoiceIndicatorMultiple"
-                android:text="This is a test"/>
+                android:drawableEnd="?android:attr/listChoiceIndicatorMultiple" />
 
             <CheckBox
                 android:id="@+id/issue_checkbox_7"
@@ -159,9 +161,7 @@
                 android:layout_height="wrap_content"
                 android:paddingBottom="8dp"
                 android:button="@null"
-                android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
-                android:drawableEnd="?android:attr/listChoiceIndicatorMultiple"
-                android:text="This is a test"/>
+                android:drawableEnd="?android:attr/listChoiceIndicatorMultiple" />
 
             <CheckBox
                 android:id="@+id/issue_checkbox_8"
@@ -169,9 +169,7 @@
                 android:layout_height="wrap_content"
                 android:paddingBottom="8dp"
                 android:button="@null"
-                android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
-                android:drawableEnd="?android:attr/listChoiceIndicatorMultiple"
-                android:text="This is a test"/>
+                android:drawableEnd="?android:attr/listChoiceIndicatorMultiple" />
 
             <CheckBox
                 android:id="@+id/issue_checkbox_9"
@@ -179,9 +177,7 @@
                 android:layout_height="wrap_content"
                 android:paddingBottom="8dp"
                 android:button="@null"
-                android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
-                android:drawableEnd="?android:attr/listChoiceIndicatorMultiple"
-                android:text="This is a test"/>
+                android:drawableEnd="?android:attr/listChoiceIndicatorMultiple" />
 
             <CheckBox
                 android:id="@+id/issue_checkbox_10"
@@ -189,18 +185,15 @@
                 android:layout_height="wrap_content"
                 android:paddingBottom="8dp"
                 android:button="@null"
-                android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
-                android:drawableEnd="?android:attr/listChoiceIndicatorMultiple"
-                android:text="This is a test"/>
+                android:drawableEnd="?android:attr/listChoiceIndicatorMultiple" />
 
             <CheckBox
                 android:id="@+id/issue_checkbox_other"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="right"
+                android:layout_gravity="end"
                 android:paddingBottom="8dp"
                 android:button="@null"
-                android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
                 android:drawableEnd="?android:attr/listChoiceIndicatorMultiple" />
 
             <EditText
@@ -208,8 +201,9 @@
                 android:layout_width="290dp"
                 android:layout_height="wrap_content"
                 android:textSize="14sp"
-                android:hint="Other (type here)"
-                android:layout_marginTop="-43dp"/>
+                android:hint="@string/checkbox_issue_other_hint"
+                android:layout_marginTop="-43dp"
+                android:inputType="text" />
 
         </LinearLayout>
     </ScrollView>
@@ -231,31 +225,28 @@
             android:layout_marginBottom="90dp"
             android:paddingTop="25dp"
             android:textSize="16sp"
-            android:hint="Enter a comment here..."/>
+            android:hint="@string/issue_comment"
+            android:inputType="text"/>
 
         <Button
             android:id="@+id/issue_back"
             android:layout_width="115dp"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_marginLeft="30dp"
             android:layout_marginStart="30dp"
             android:layout_marginTop="80dp"
             android:textColor="@android:color/holo_red_light"
-            android:text="Back"/>
+            android:text="@string/back_button"/>
 
         <Button
             android:id="@+id/issue_confirm"
             android:layout_width="115dp"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginRight="30dp"
             android:layout_marginEnd="30dp"
             android:layout_marginTop="80dp"
             android:textColor="@color/colorPrimary"
-            android:text="Confirm"/>
+            android:text="@string/confirm_button"/>
 
     </RelativeLayout>
 </RelativeLayout>
