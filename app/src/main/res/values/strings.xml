@@ -140,6 +140,7 @@
     <string name="profile_zip">Zip Code :  %1$s</string>
     <string name="profile_phone">Phone number :  %1$s</string>
     <string name="profile_mail">Email address :  %1$s</string>
+    <string name="profile_title1_edit_button">Edit</string>
 
 
 </resources>
