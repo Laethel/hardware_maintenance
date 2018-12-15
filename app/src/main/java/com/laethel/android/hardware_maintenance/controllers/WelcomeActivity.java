@@ -28,7 +28,7 @@ public class WelcomeActivity extends AppCompatActivity {
     private EditText mMail;
     private Button mStart;
     private User mUser;
-    private SharedPreferences mPreferences;
+    SharedPreferences mPreferences;
 
     public static final String PREF_KEY_FIRSTNAME = "PREF_KEY_FIRSTNAME";
     public static final String PREF_KEY_LASTNAME = "PREF_KEY_LASTNAME";
@@ -42,7 +42,7 @@ public class WelcomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
         mUser = new User();
-        mPreferences = getPreferences(MODE_PRIVATE);
+        mPreferences = getSharedPreferences("userdetails",MODE_PRIVATE);
         mGreetingText = findViewById(R.id.welcome_text);
         mFirstName = findViewById(R.id.welcome_first_name);
         mLastName = findViewById(R.id.welcome_last_name);

@@ -22,9 +22,9 @@ public class IssueActivity extends AppCompatActivity {
     private TextView mIssue_banner;
     private CheckBox mIssue_checkbox_diagnosis;
     private TextView mIssue_text_diagnosis;
-    private Button mMainBtHome;
-    private Button mMainBtRepairs;
-    private Button mMainBtProfile;
+    private Button mIssueBtHome;
+    private Button mIssueBtRepairs;
+    private Button mIssueBtProfile;
     private CheckBox mIssue_checkbox_1;
     private CheckBox mIssue_checkbox_2;
     private CheckBox mIssue_checkbox_3;
@@ -55,9 +55,9 @@ public class IssueActivity extends AppCompatActivity {
         mIssue_banner.setText(issueName);
         mIssue_checkbox_diagnosis = findViewById(R.id.issue_checkbox_diagnosis);
         mIssue_text_diagnosis = findViewById(R.id.issue_text_diagnosis);
-        mMainBtHome = findViewById(R.id.main_buttonHome);
-        mMainBtRepairs = findViewById(R.id.main_buttonRepairs);
-        mMainBtProfile = findViewById(R.id.main_buttonProfile);
+        mIssueBtHome = findViewById(R.id.issue_buttonHome);
+        mIssueBtRepairs = findViewById(R.id.issue_buttonRepairs);
+        mIssueBtProfile = findViewById(R.id.issue_buttonProfile);
         mIssue_checkbox_1 = findViewById(R.id.issue_checkbox_1);
         mIssue_checkbox_2 = findViewById(R.id.issue_checkbox_2);
         mIssue_checkbox_3 = findViewById(R.id.issue_checkbox_3);
@@ -337,6 +337,21 @@ public class IssueActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 IssueActivity.this.finish();
+            }
+        });
+
+        mIssueBtHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                IssueActivity.this.finish();
+            }
+        });
+
+        mIssueBtProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent profileActivity = new Intent(IssueActivity.this, ProfileActivity.class);
+                startActivity(profileActivity);
             }
         });
 

@@ -183,7 +183,8 @@ public class MainActivity extends AppCompatActivity {
         mMainBtProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent profileActivity = new Intent(MainActivity.this, ProfileActivity.class);
+                startActivity(profileActivity);
             }
         });
 
