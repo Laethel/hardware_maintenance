@@ -2,6 +2,7 @@ package com.laethel.android.hardware_maintenance.controllers;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -29,18 +30,18 @@ public class MainActivity extends AppCompatActivity {
     private Button mMainBtHome;
     private Button mMainBtRepairs;
     private Button mMainBtProfile;
-    protected String fNameUser;
+
+    SharedPreferences mPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        final Bundle extras = getIntent().getExtras();
-        if (extras != null){
-            this.fNameUser = extras.getString("firstName");
-        }
+        mPreferences = getSharedPreferences("userdetails", MODE_PRIVATE);
+        String userFirstName = mPreferences.getString("PREF_KEY_FIRSTNAME","");
+
         mMainBanner = findViewById(R.id.main_banner);
-        mMainBanner.setText(getString(R.string.main_banner_text, fNameUser));// Display the welcome message and the name of the user
+        mMainBanner.setText(getString(R.string.main_banner_text, userFirstName));// Display the welcome message and the name of the user
         mMainBtDiagnosis = findViewById(R.id.main_buttonDiagnosis);
         mMainBt1 = findViewById(R.id.main_button1);
         mMainBt2 = findViewById(R.id.main_button2);

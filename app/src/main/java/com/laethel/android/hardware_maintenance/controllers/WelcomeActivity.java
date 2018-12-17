@@ -54,11 +54,12 @@ public class WelcomeActivity extends AppCompatActivity {
         mStart = findViewById(R.id.welcome_start);
         checkExistingUser();
         checkRequiredFields();
-
+        detectBlanks();
+        
         mFirstName.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
+                checkRequiredFields();
             }
 
             @Override
@@ -68,14 +69,18 @@ public class WelcomeActivity extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
-
+                checkRequiredFields();
+                if(mFirstName.getText().length()==0)
+                {
+                    mFirstName.setError("Please enter a value.");
+                }
             }
         });
 
         mLastName.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
+                checkRequiredFields();
             }
 
             @Override
@@ -85,14 +90,18 @@ public class WelcomeActivity extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
-
+                checkRequiredFields();
+                if(mLastName.getText().length()==0)
+                {
+                    mLastName.setError("Please enter a value.");
+                }
             }
         });
 
         mAddress.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
+                checkRequiredFields();
             }
 
             @Override
@@ -102,14 +111,18 @@ public class WelcomeActivity extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
-
+                checkRequiredFields();
+                if(mAddress.getText().length()==0)
+                {
+                    mAddress.setError("Please enter a value.");
+                }
             }
         });
 
         mCity.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
+                checkRequiredFields();
             }
 
             @Override
@@ -119,7 +132,11 @@ public class WelcomeActivity extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
-
+                checkRequiredFields();
+                if(mCity.getText().length()==0)
+                {
+                    mCity.setError("Please enter a value.");
+                }
             }
         });
 
@@ -128,7 +145,6 @@ public class WelcomeActivity extends AppCompatActivity {
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
                 checkRequiredFields();
             }
-
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 checkRequiredFields();
@@ -136,14 +152,18 @@ public class WelcomeActivity extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
-
+                checkRequiredFields();
+                if(mZip.getText().length()==0)
+                {
+                    mZip.setError("Please enter a value.");
+                }
             }
         });
 
         mPhone.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
+                checkRequiredFields();
             }
 
             @Override
@@ -153,14 +173,18 @@ public class WelcomeActivity extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
-
+                checkRequiredFields();
+                if(mPhone.getText().length()==0)
+                {
+                    mPhone.setError("Please enter a value.");
+                }
             }
         });
 
         mMail.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
+                checkRequiredFields();
             }
 
             @Override
@@ -170,7 +194,11 @@ public class WelcomeActivity extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
-
+                checkRequiredFields();
+                if(mMail.getText().length()==0)
+                {
+                    mMail.setError("Please enter a value.");
+                }
             }
         });
 
@@ -199,7 +227,6 @@ public class WelcomeActivity extends AppCompatActivity {
                 mPreferences.edit().putString(PREF_KEY_PHONE, mUser.getmPhone()).apply();
                 mPreferences.edit().putString(PREF_KEY_MAIL, mUser.getmMail()).apply();
                 Intent mainActivity = new Intent(WelcomeActivity.this, MainActivity.class);
-                mainActivity.putExtra("firstName", firstName);
                 startActivity(mainActivity);
             }
         });
@@ -250,6 +277,30 @@ public class WelcomeActivity extends AppCompatActivity {
                     })
                     .create()
                     .show();
+        }
+    }
+
+    private void detectBlanks(){
+        if(mFirstName.getText().length()==0) {
+            mFirstName.setError("Please enter a value.");
+        }
+        if(mLastName.getText().length()==0) {
+            mLastName.setError("Please enter a value.");
+        }
+        if(mAddress.getText().length()==0) {
+            mAddress.setError("Please enter a value.");
+        }
+        if(mCity.getText().length()==0) {
+            mCity.setError("Please enter a value.");
+        }
+        if(mZip.getText().length()==0) {
+            mZip.setError("Please enter a value.");
+        }
+        if(mPhone.getText().length()==0) {
+            mPhone.setError("Please enter a value.");
+        }
+        if(mMail.getText().length()==0) {
+            mMail.setError("Please enter a value.");
         }
     }
 }

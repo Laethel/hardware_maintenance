@@ -20,7 +20,8 @@
         <activity
             android:name=".controllers.IssueActivity"
             android:windowSoftInputMode="stateHidden"></activity>
-        <activity android:name=".controllers.ProfileActivity"></activity>
+        <activity android:name=".controllers.ProfileActivity"
+            android:windowSoftInputMode="adjustPan"></activity>
     </application>
 
 </manifest>

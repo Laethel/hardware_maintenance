@@ -63,6 +63,7 @@
         android:hint="@string/zip_code"
         android:layout_gravity="end"
         android:layout_marginTop="-46dp"
+        android:maxLength="5"
         android:inputType="number"/>
 
     <EditText

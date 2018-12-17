@@ -58,7 +58,7 @@
         android:layout_above="@id/bottom_menu"
         android:layout_below="@+id/profile_banner">
 
-        <LinearLayout
+        <RelativeLayout
 
             android:orientation="vertical"
             android:layout_width="match_parent"
@@ -81,59 +81,193 @@
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
                 android:text="@string/profile_title1_edit_button"
-                android:layout_gravity="end"
-                android:layout_marginTop="-34dp"/>
+                android:layout_alignParentEnd="true" />
+
+            <Button
+                android:id="@+id/profile_title1_confirm_button"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="@string/profile_title1_validate_button"
+                android:layout_alignParentEnd="true"
+                android:visibility="invisible"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/profile_first_name_title"
+                android:layout_alignParentStart="true"
+                android:text="@string/profile_first_name_title"
+                android:layout_marginTop="60dp"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/profile_first_name"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="15dp"/>
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="60dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/profile_first_name_edit"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="40dp"
+                android:visibility="invisible"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/profile_last_name_title"
+                android:layout_alignParentStart="true"
+                android:text="@string/profile_last_name_title"
+                android:layout_marginTop="95dp"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/profile_last_name"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="15dp"/>
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="95dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/profile_last_name_edit"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="75dp"
+                android:layout_marginStart="80dp"
+                android:visibility="invisible"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/profile_address_title"
+                android:layout_alignParentStart="true"
+                android:text="@string/profile_address_title"
+                android:layout_marginTop="130dp"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/profile_address"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="15dp"/>
+                android:layout_marginStart="70dp"
+                android:layout_marginTop="130dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/profile_address_edit"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="70dp"
+                android:layout_marginTop="110dp"
+                android:visibility="invisible"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/profile_city_title"
+                android:layout_alignParentStart="true"
+                android:text="@string/profile_city_title"
+                android:layout_marginTop="165dp"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/profile_city"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="15dp"/>
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="165dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/profile_city_edit"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="145dp"
+                android:visibility="invisible"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/profile_zip_title"
+                android:layout_alignParentStart="true"
+                android:text="@string/profile_zip_title"
+                android:layout_marginTop="200dp"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/profile_zip"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="15dp"/>
+                android:layout_marginStart="70dp"
+                android:layout_marginTop="200dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/profile_zip_edit"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="70dp"
+                android:layout_marginTop="180dp"
+                android:maxLength="5"
+                android:visibility="invisible"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/profile_phone_title"
+                android:layout_alignParentStart="true"
+                android:text="@string/profile_phone_title"
+                android:layout_marginTop="235dp"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/profile_phone"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="15dp"/>
+                android:layout_marginStart="105dp"
+                android:layout_marginTop="235dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/profile_phone_edit"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="105dp"
+                android:layout_marginTop="215dp"
+                android:visibility="invisible"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/profile_mail_title"
+                android:layout_alignParentStart="true"
+                android:text="@string/profile_mail_title"
+                android:layout_marginTop="270dp"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/profile_mail"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="15dp"/>
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="270dp"/>
 
-        </LinearLayout>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/profile_mail_edit"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="250dp"
+                android:visibility="invisible"/>
+
+        </RelativeLayout>
     </ScrollView>
 
     <LinearLayout

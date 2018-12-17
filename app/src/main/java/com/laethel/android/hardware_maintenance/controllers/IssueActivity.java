@@ -81,6 +81,10 @@ public class IssueActivity extends AppCompatActivity {
                 mIssue_checkbox_diagnosis.setVisibility(View.INVISIBLE);
                 mIssue_text_diagnosis.setVisibility(View.VISIBLE);
                 mIssue_comment.setHint(R.string.diagnosis_comment);
+                if(mIssue_comment.getText().length()==0)
+                {
+                    mIssue_comment.setError("Please enter a description.");
+                }
                 mIssue_checkbox_1.setText(R.string.main_bt1);
                 mIssue_checkbox_2.setText(R.string.main_bt2);
                 mIssue_checkbox_3.setText(R.string.main_bt3);

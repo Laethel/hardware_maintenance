@@ -133,14 +133,14 @@
     <string name="diagnosis_comment">Enter a description here&#8230;</string>
     <string name="profile_personal_info_title">PERSONAL INFORMATION</string>
     <string name="profile_banner_user_name">%1$s %2$s</string>
-    <string name="profile_first_name">First name :  %1$s</string>
-    <string name="profile_last_name">Last name :  %1$s</string>
-    <string name="profile_address">Address :  %1$s</string>
-    <string name="profile_city">City :  %1$s</string>
-    <string name="profile_zip">Zip Code :  %1$s</string>
-    <string name="profile_phone">Phone number :  %1$s</string>
-    <string name="profile_mail">Email address :  %1$s</string>
+    <string name="profile_first_name_title">First name : </string>
+    <string name="profile_last_name_title">Last name : </string>
+    <string name="profile_address_title">Address : </string>
+    <string name="profile_city_title">City : </string>
+    <string name="profile_zip_title">Zip code : </string>
+    <string name="profile_phone_title">Phone number : </string>
+    <string name="profile_mail_title">Email : </string>
     <string name="profile_title1_edit_button">Edit</string>
-
+    <string name="profile_title1_validate_button">Validate</string>
 
 </resources>
