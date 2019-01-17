@@ -39,6 +39,17 @@
             app:civ_border_width="2dp"
             app:civ_border_color="#FF000000"/>
 
+        <Button
+            android:id="@+id/profile_load_picture_button"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginStart="240dp"
+            android:textSize="12sp"
+            android:text="@string/profile_change_picture_button"
+            android:layout_gravity="center">
+        </Button>
+
         <TextView
             android:id="@+id/profile_banner_user_name"
             android:layout_width="match_parent"

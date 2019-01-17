@@ -3,6 +3,10 @@ package com.laethel.android.hardware_maintenance.controllers;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.database.Cursor;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
+import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
@@ -10,6 +14,7 @@ import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.laethel.android.hardware_maintenance.R;
@@ -41,6 +46,9 @@ public class ProfileActivity extends AppCompatActivity {
     private Button mProfileBtProfile;
     private Button mProfileBtTitle1Edit;
     private Button mProfileBtTitle1Validate;
+    private Button mProfileBtLoadPicture;
+
+    private static int RESULT_LOAD_IMAGE = 1;
 
     SharedPreferences mPreferences;
 
@@ -74,6 +82,7 @@ public class ProfileActivity extends AppCompatActivity {
         mProfileBtHome = findViewById(R.id.profile_buttonHome);
         mProfileBtRepairs = findViewById(R.id.profile_buttonRepairs);
         mProfileBtProfile = findViewById(R.id.profile_buttonProfile);
+        mProfileBtLoadPicture = findViewById(R.id.profile_load_picture_button);
 
         String userFirstName = mPreferences.getString("PREF_KEY_FIRSTNAME","");
         String userLastName = mPreferences.getString("PREF_KEY_LASTNAME","");
@@ -321,6 +330,45 @@ public class ProfileActivity extends AppCompatActivity {
                 }
             }
         });
+
+        mProfileBtLoadPicture.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(
+                        Intent.ACTION_PICK,
+                        android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+
+                startActivityForResult(i, RESULT_LOAD_IMAGE);
+            }
+        });
+
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == RESULT_LOAD_IMAGE && resultCode == RESULT_OK && null != data) {
+            Uri selectedImage = data.getData();
+            String[] filePathColumn = { MediaStore.Images.Media.DATA };
+
+            Cursor cursor = null;
+            if (selectedImage != null) {
+                cursor = getContentResolver().query(selectedImage,
+                        filePathColumn, null, null, null);
+            }
+            if (cursor != null) {
+                cursor.moveToFirst();
+                int columnIndex = cursor.getColumnIndex(filePathColumn[0]);
+                String picturePath = cursor.getString(columnIndex);
+                cursor.close();
+                CircleImageView circleImageView = findViewById(R.id.profile_image);
+                circleImageView.setImageBitmap(BitmapFactory.decodeFile(picturePath));
+                circleImageView.setImageURI(selectedImage);
+            }
+
+        }
+
 
     }
 

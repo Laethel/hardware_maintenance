@@ -142,5 +142,6 @@
     <string name="profile_mail_title">Email : </string>
     <string name="profile_title1_edit_button">Edit</string>
     <string name="profile_title1_validate_button">Validate</string>
+    <string name="profile_change_picture_button">Browse</string>
 
 </resources>
